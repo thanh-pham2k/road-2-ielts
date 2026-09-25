@@ -51,27 +51,27 @@ Flow: Question → Answer → Reason → Example
 - [ ] **[WRK-01] 1. What do you do?**
 
 ```
-I am currently working as a software developer. Specifically, I build and maintain web applications.
+I work as a software engineer.
 ```
 - [ ] **[WRK-02] 2. Where do you work?**
 
 ```
-I work for a tech company in Vietnam, mostly working from the office with some remote days.
+I work for a tech company in Vietnam.
 ```
 - [ ] **[WRK-03] 3. What do you usually do at work?**
 
 ```
-My daily tasks involve writing code, fixing bugs, and discussing technical solutions with my team.
+I write code and fix software bugs every day.
 ```
 - [ ] **[WRK-04] 4. What do you like about your job?**
 
 ```
-I enjoy solving complex problems and creating software solutions that help people in their daily work.
+I like solving problems and building new features.
 ```
 - [ ] **[WRK-05] 5. What is the most difficult part of your job?**
 
 ```
-The most challenging part is meeting tight deadlines while keeping up with rapidly changing technologies.
+The hardest part is dealing with tight deadlines.
 ```
 - [ ] **[WRK-06] 6. Do you prefer working alone or in a team?**
 
