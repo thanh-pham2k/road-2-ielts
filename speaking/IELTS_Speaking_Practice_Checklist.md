@@ -61,17 +61,17 @@ I work for a tech company in Vietnam.
 - [ ] **[WRK-03] 3. What do you usually do at work?**
 
 ```
-I write code and fix software bugs every day.
+I use AI to analyze requirements, write code, and solve technical problems.
 ```
 - [ ] **[WRK-04] 4. What do you like about your job?**
 
 ```
-I like solving problems and building new features.
+I enjoy using AI to turn ideas into working software faster.
 ```
 - [ ] **[WRK-05] 5. What is the most difficult part of your job?**
 
 ```
-The hardest part is dealing with tight deadlines.
+The hardest part is managing multiple AI agents and making sure they work together effectively.
 ```
 - [ ] **[WRK-06] 6. Do you prefer working alone or in a team?**
 
