@@ -76,27 +76,27 @@ The hardest part is managing multiple AI agents and making sure they work togeth
 - [ ] **[WRK-06] 6. Do you prefer working alone or in a team?**
 
 ```
-
+I prefer teamwork because we solve problems faster.
 ```
 - [ ] **[WRK-07] 7. What skills are important for your job?**
 
 ```
-
+Problem-solving and communication are key skills in my job.
 ```
 - [ ] **[WRK-08] 8. How do you deal with problems at work?**
 
 ```
-
+I break problems down and solve them one by one.
 ```
 - [ ] **[WRK-09] 9. What would you like to improve at work?**
 
 ```
-
+I'd like to improve my communication with teammates.
 ```
 - [ ] **[WRK-10] 10. Where do you see yourself in the next few years?**
 
 ```
-
+I hope to become a tech lead and guide a team.
 ```
 ---
 
