@@ -105,27 +105,27 @@ I hope to become a tech lead and guide a team.
 - [ ] **[INT-01] 1. Can you introduce yourself?**
 
 ```
-
+I am a software engineer with over three years of experience in full-stack web development.
 ```
 - [ ] **[INT-02] 2. Can you tell me about your work experience?**
 
 ```
-
+I have experience developing and maintaining web applications and working with cross-functional teams.
 ```
 - [ ] **[INT-03] 3. What are your strengths?**
 
 ```
-
+My strengths are learning quickly, solving problems, and taking responsibility for my work.
 ```
 - [ ] **[INT-04] 4. What is one weakness you are trying to improve?**
 
 ```
-
+I sometimes focus too much on small details, so I am learning to manage my time better.
 ```
 - [ ] **[INT-05] 5. Why are you interested in this position?**
 
 ```
-
+I am interested in this role because it matches my experience and offers opportunities to learn and grow.
 ```
 - [ ] **[INT-06] 6. Can you tell me about a project you worked on?**
 
