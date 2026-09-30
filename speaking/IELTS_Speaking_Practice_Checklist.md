@@ -130,27 +130,27 @@ I am interested in this role because it matches my experience and offers opportu
 - [ ] **[INT-06] 6. Can you tell me about a project you worked on?**
 
 ```
-
+Recently, I worked on a maritime logistics project where I handled both frontend and backend development.
 ```
 - [ ] **[INT-07] 7. What was a difficult problem you faced?**
 
 ```
-
+I often faced unclear requirements, which required discussions with stakeholders before taking action.
 ```
 - [ ] **[INT-08] 8. How did you solve that problem?**
 
 ```
-
+I organized meetings with relevant teams to clarify requirements and reach an agreement on the solution.
 ```
 - [ ] **[INT-09] 9. How do you handle disagreements with your teammates?**
 
 ```
-
+I listen to their opinions, evaluate the options together, and reach an agreement on the best solution.
 ```
 - [ ] **[INT-10] 10. Why should we hire you?**
 
 ```
-
+You should hire me because I have solid technical skills, a strong work ethic, and adapt quickly to new challenges.
 ```
 ---
 
