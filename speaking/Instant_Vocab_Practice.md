@@ -13,7 +13,7 @@ I work for a tech company in Vietnam.,,Tôi làm việc cho một công ty công
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi
 What do you usually do at work?,,Bạn thường làm gì ở chỗ làm?,What do you usually do at work?,Bạn thường làm gì ở chỗ làm?
-I use AI to analyze requirements, write code, and solve technical problems.,,Tôi dùng AI để phân tích yêu cầu viết code và giải quyết vấn đề kỹ thuật.,I use AI to analyze requirements, write code, and solve technical problems.,Tôi dùng AI để phân tích yêu cầu viết code và giải quyết vấn đề kỹ thuật.
+I use AI to analyze requirements write code and solve technical problems.,,Tôi dùng AI để phân tích yêu cầu viết code và giải quyết vấn đề kỹ thuật.,I use AI to analyze requirements write code and solve technical problems.,Tôi dùng AI để phân tích yêu cầu viết code và giải quyết vấn đề kỹ thuật.
 ```
 
 ```
@@ -73,13 +73,13 @@ I have experience developing and maintaining web applications and working with c
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi
 What are your strengths?,,Điểm mạnh của bạn là gì?,What are your strengths?,Điểm mạnh của bạn là gì?
-My strengths are learning quickly, solving problems, and taking responsibility for my work.,,Thế mạnh của tôi là học hỏi nhanh giải quyết vấn đề và có trách nhiệm với công việc.,My strengths are learning quickly, solving problems, and taking responsibility for my work.,Thế mạnh của tôi là học hỏi nhanh giải quyết vấn đề và có trách nhiệm với công việc.
+My strengths are learning quickly solving problems and taking responsibility for my work.,,Thế mạnh của tôi là học hỏi nhanh giải quyết vấn đề và có trách nhiệm với công việc.,My strengths are learning quickly solving problems and taking responsibility for my work.,Thế mạnh của tôi là học hỏi nhanh giải quyết vấn đề và có trách nhiệm với công việc.
 ```
 
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi
 What is one weakness you are trying to improve?,,Một điểm yếu mà bạn đang cố gắng cải thiện là gì?,What is one weakness you are trying to improve?,Một điểm yếu mà bạn đang cố gắng cải thiện là gì?
-I sometimes focus too much on small details, so I am learning to manage my time better.,,Đôi khi tôi quá tập trung vào chi tiết nhỏ nên tôi đang học cách quản lý thời gian tốt hơn.,I sometimes focus too much on small details, so I am learning to manage my time better.,Đôi khi tôi quá tập trung vào chi tiết nhỏ nên tôi đang học cách quản lý thời gian tốt hơn.
+I sometimes focus too much on small details so I am learning to manage my time better.,,Đôi khi tôi quá tập trung vào chi tiết nhỏ nên tôi đang học cách quản lý thời gian tốt hơn.,I sometimes focus too much on small details so I am learning to manage my time better.,Đôi khi tôi quá tập trung vào chi tiết nhỏ nên tôi đang học cách quản lý thời gian tốt hơn.
 ```
 
 ```
@@ -91,13 +91,13 @@ I am interested in this role because it matches my experience and offers opportu
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi
 Can you tell me about a project you worked on?,,Bạn có thể kể về một dự án bạn đã từng làm không?,Can you tell me about a project you worked on?,Bạn có thể kể về một dự án bạn đã từng làm không?
-Recently, I worked on a maritime logistics project where I handled both frontend and backend development.,,Gần đây tôi làm việc trên một dự án logistics hàng hải nơi tôi phụ trách cả frontend và backend.,Recently, I worked on a maritime logistics project where I handled both frontend and backend development.,Gần đây tôi làm việc trên một dự án logistics hàng hải nơi tôi phụ trách cả frontend và backend.
+Recently I worked on a maritime logistics project where I handled both frontend and backend development.,,Gần đây tôi làm việc trên một dự án logistics hàng hải nơi tôi phụ trách cả frontend và backend.,Recently I worked on a maritime logistics project where I handled both frontend and backend development.,Gần đây tôi làm việc trên một dự án logistics hàng hải nơi tôi phụ trách cả frontend và backend.
 ```
 
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi
 What was a difficult problem you faced?,,Một vấn đề khó khăn bạn từng gặp phải là gì?,What was a difficult problem you faced?,Một vấn đề khó khăn bạn từng gặp phải là gì?
-I often faced unclear requirements, which required discussions with stakeholders before taking action.,,Tôi thường gặp các yêu cầu không rõ ràng đòi hỏi phải thảo luận với các bên liên quan trước khi triển khai.,I often faced unclear requirements, which required discussions with stakeholders before taking action.,Tôi thường gặp các yêu cầu không rõ ràng đòi hỏi phải thảo luận với các bên liên quan trước khi triển khai.
+I often faced unclear requirements which required discussions with stakeholders before taking action.,,Tôi thường gặp các yêu cầu không rõ ràng đòi hỏi phải thảo luận với các bên liên quan trước khi triển khai.,I often faced unclear requirements which required discussions with stakeholders before taking action.,Tôi thường gặp các yêu cầu không rõ ràng đòi hỏi phải thảo luận với các bên liên quan trước khi triển khai.
 ```
 
 ```
@@ -109,11 +109,11 @@ I organized meetings with relevant teams to clarify requirements and reach an ag
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi
 How do you handle disagreements with your teammates?,,Bạn xử lý bất đồng ý kiến với đồng đội như thế nào?,How do you handle disagreements with your teammates?,Bạn xử lý bất đồng ý kiến với đồng đội như thế nào?
-I listen to their opinions, evaluate the options together, and reach an agreement on the best solution.,,Tôi lắng nghe ý kiến của họ cùng nhau đánh giá các phương án và thống nhất giải pháp tốt nhất.,I listen to their opinions, evaluate the options together, and reach an agreement on the best solution.,Tôi lắng nghe ý kiến của họ cùng nhau đánh giá các phương án và thống nhất giải pháp tốt nhất.
+I listen to their opinions evaluate the options together and reach an agreement on the best solution.,,Tôi lắng nghe ý kiến của họ cùng nhau đánh giá các phương án và thống nhất giải pháp tốt nhất.,I listen to their opinions evaluate the options together and reach an agreement on the best solution.,Tôi lắng nghe ý kiến của họ cùng nhau đánh giá các phương án và thống nhất giải pháp tốt nhất.
 ```
 
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi
 Why should we hire you?,,Tại sao chúng tôi nên tuyển dụng bạn?,Why should we hire you?,Tại sao chúng tôi nên tuyển dụng bạn?
-You should hire me because I have solid technical skills, a strong work ethic, and adapt quickly to new challenges.,,Bạn nên tuyển tôi vì tôi có kỹ năng vững tinh thần làm việc tốt và thích ứng nhanh với các thử thách mới.,You should hire me because I have solid technical skills, a strong work ethic, and adapt quickly to new challenges.,Bạn nên tuyển tôi vì tôi có kỹ năng vững tinh thần làm việc tốt và thích ứng nhanh với các thử thách mới.
+You should hire me because I have solid technical skills a strong work ethic and adapt quickly to new challenges.,,Bạn nên tuyển tôi vì tôi có kỹ năng vững tinh thần làm việc tốt và thích ứng nhanh với các thử thách mới.,You should hire me because I have solid technical skills a strong work ethic and adapt quickly to new challenges.,Bạn nên tuyển tôi vì tôi có kỹ năng vững tinh thần làm việc tốt và thích ứng nhanh với các thử thách mới.
 ```
