@@ -159,27 +159,27 @@ You should hire me because I have solid technical skills, a strong work ethic, a
 - [ ] **[TECH-01] 1. What technology do you use every day?**
 
 ```
-
+I use my laptop, code editors, and various AI tools every day.
 ```
 - [ ] **[TECH-02] 2. How does technology help you at work?**
 
 ```
-
+Technology helps me automate repetitive tasks and build software much faster.
 ```
 - [ ] **[TECH-03] 3. What programming languages do you use?**
 
 ```
-
+I mainly use TypeScript and Java for my web development projects.
 ```
 - [ ] **[TECH-04] 4. What technology are you learning now?**
 
 ```
-
+I am currently learning about AI agent architectures and modern cloud services.
 ```
 - [ ] **[TECH-05] 5. How do you learn a new technology?**
 
 ```
-
+I usually use AI to summarize documentation and then dive deeper into important parts.
 ```
 - [ ] **[TECH-06] 6. Do you use AI tools at work?**
 

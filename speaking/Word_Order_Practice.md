@@ -117,3 +117,33 @@ vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
 Why should we hire you?,,Tại sao chúng tôi nên tuyển dụng bạn?,Why should we hire you?,Tại sao chúng tôi nên tuyển dụng bạn?,Why|should we hire you?
 You should hire me because I have solid technical skills a strong work ethic and adapt quickly to new challenges.,,Bạn nên tuyển tôi vì tôi có kỹ năng vững tinh thần làm việc tốt và thích ứng nhanh với các thử thách mới.,You should hire me because I have solid technical skills a strong work ethic and adapt quickly to new challenges.,Bạn nên tuyển tôi vì tôi có kỹ năng vững tinh thần làm việc tốt và thích ứng nhanh với các thử thách mới.,You should hire me|because I have solid technical skills|a strong work ethic|and adapt quickly to new challenges.
 ```
+
+```
+vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
+What technology do you use every day?,,Bạn sử dụng công nghệ gì mỗi ngày?,What technology do you use every day?,Bạn sử dụng công nghệ gì mỗi ngày?,What technology|do you use|every day?
+I use my laptop code editors and various AI tools every day.,,Tôi sử dụng máy tính xách tay trình soạn thảo mã và các công cụ AI khác nhau mỗi ngày.,I use my laptop code editors and various AI tools every day.,Tôi sử dụng máy tính xách tay trình soạn thảo mã và các công cụ AI khác nhau mỗi ngày.,I use my laptop|code editors|and various AI tools|every day.
+```
+
+```
+vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
+How does technology help you at work?,,Công nghệ giúp ích gì cho bạn trong công việc?,How does technology help you at work?,Công nghệ giúp ích gì cho bạn trong công việc?,How does technology|help you|at work?
+Technology helps me automate repetitive tasks and build software much faster.,,Công nghệ giúp tôi tự động hóa các tác vụ lặp đi lặp lại và xây dựng phần mềm nhanh hơn nhiều.,Technology helps me automate repetitive tasks and build software much faster.,Công nghệ giúp tôi tự động hóa các tác vụ lặp đi lặp lại và xây dựng phần mềm nhanh hơn nhiều.,Technology helps me|automate repetitive tasks|and build software|much faster.
+```
+
+```
+vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
+What programming languages do you use?,,Bạn sử dụng những ngôn ngữ lập trình nào?,What programming languages do you use?,Bạn sử dụng những ngôn ngữ lập trình nào?,What programming languages|do you use?
+I mainly use TypeScript and Java for my web development projects.,,Tôi chủ yếu sử dụng TypeScript và Java cho các dự án phát triển web của mình.,I mainly use TypeScript and Java for my web development projects.,Tôi chủ yếu sử dụng TypeScript và Java cho các dự án phát triển web của mình.,I mainly use TypeScript and Java|for my web development projects.
+```
+
+```
+vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
+What technology are you learning now?,,Hiện tại bạn đang học công nghệ gì?,What technology are you learning now?,Hiện tại bạn đang học công nghệ gì?,What technology|are you learning now?
+I am currently learning about AI agent architectures and modern cloud services.,,Hiện tại tôi đang tìm hiểu về kiến trúc AI agent và các dịch vụ đám mây hiện đại.,I am currently learning about AI agent architectures and modern cloud services.,Hiện tại tôi đang tìm hiểu về kiến trúc AI agent và các dịch vụ đám mây hiện đại.,I am currently learning about|AI agent architectures|and modern cloud services.
+```
+
+```
+vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
+How do you learn a new technology?,,Bạn học một công nghệ mới như thế nào?,How do you learn a new technology?,Bạn học một công nghệ mới như thế nào?,How do you learn|a new technology?
+I usually use AI to summarize documentation and then dive deeper into important parts.,,Tôi thường dùng AI để tóm tắt tài liệu và sau đó tìm hiểu sâu hơn về các phần quan trọng.,I usually use AI to summarize documentation and then dive deeper into important parts.,Tôi thường dùng AI để tóm tắt tài liệu và sau đó tìm hiểu sâu hơn về các phần quan trọng.,I usually use AI|to summarize documentation|and then dive deeper|into important parts.
+```

@@ -22,3 +22,6 @@ Nhật ký ôn tập Speaking hàng ngày.
 
 ### 2026-09-30
 - INT-06, INT-07, INT-08, INT-09, INT-10
+
+### 2026-10-06
+- TECH-01, TECH-02, TECH-03, TECH-04, TECH-05
