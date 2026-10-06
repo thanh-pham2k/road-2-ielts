@@ -1,3 +1,5 @@
+### 2026-09-25
+
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
 What do you do?,,Bạn làm nghề gì?,What do you do?,Bạn làm nghề gì?,What|do you do?
@@ -27,6 +29,8 @@ vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
 What is the most difficult part of your job?,,Phần khó nhất trong công việc của bạn là gì?,What is the most difficult part of your job?,Phần khó nhất trong công việc của bạn là gì?,What is|the most difficult part|of your job?
 The hardest part is managing multiple AI agents and making sure they work together effectively.,,Phần khó nhất là quản lý nhiều AI agent và đảm bảo chúng hoạt động cùng nhau hiệu quả.,The hardest part is managing multiple AI agents and making sure they work together effectively.,Phần khó nhất là quản lý nhiều AI agent và đảm bảo chúng hoạt động cùng nhau hiệu quả.,The hardest part is|managing multiple AI agents|and making sure|they work together|effectively.
 ```
+
+### 2026-09-27
 
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
@@ -58,6 +62,8 @@ Where do you see yourself in the next few years?,,Bạn thấy mình ở đâu t
 I hope to become a tech lead and guide a team.,,Tôi hy vọng sẽ trở thành một tech lead và dẫn dắt một đội ngũ.,I hope to become a tech lead and guide a team.,Tôi hy vọng sẽ trở thành một tech lead và dẫn dắt một đội ngũ.,I hope to become|a tech lead|and guide a team.
 ```
 
+### 2026-09-28
+
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
 Can you introduce yourself?,,Bạn có thể giới thiệu bản thân không?,Can you introduce yourself?,Bạn có thể giới thiệu bản thân không?,Can you|introduce yourself?
@@ -88,6 +94,8 @@ Why are you interested in this position?,,Tại sao bạn quan tâm đến vị 
 I am interested in this role because it matches my experience and offers opportunities to learn and grow.,,Tôi quan tâm đến vị trí này vì nó phù hợp với kinh nghiệm của tôi và mang lại cơ hội phát triển.,I am interested in this role because it matches my experience and offers opportunities to learn and grow.,Tôi quan tâm đến vị trí này vì nó phù hợp với kinh nghiệm của tôi và mang lại cơ hội phát triển.,I am interested in this role|because it matches my experience|and offers opportunities|to learn and grow.
 ```
 
+### 2026-09-30
+
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
 Can you tell me about a project you worked on?,,Bạn có thể kể về một dự án bạn đã từng làm không?,Can you tell me about a project you worked on?,Bạn có thể kể về một dự án bạn đã từng làm không?,Can you tell me|about a project you worked on?
@@ -117,6 +125,8 @@ vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
 Why should we hire you?,,Tại sao chúng tôi nên tuyển dụng bạn?,Why should we hire you?,Tại sao chúng tôi nên tuyển dụng bạn?,Why|should we hire you?
 You should hire me because I have solid technical skills a strong work ethic and adapt quickly to new challenges.,,Bạn nên tuyển tôi vì tôi có kỹ năng vững tinh thần làm việc tốt và thích ứng nhanh với các thử thách mới.,You should hire me because I have solid technical skills a strong work ethic and adapt quickly to new challenges.,Bạn nên tuyển tôi vì tôi có kỹ năng vững tinh thần làm việc tốt và thích ứng nhanh với các thử thách mới.,You should hire me|because I have solid technical skills|a strong work ethic|and adapt quickly to new challenges.
 ```
+
+### 2026-10-06
 
 ```
 vocabulary,hiragana,meaning_vi,example_ja,example_vi,word_order
