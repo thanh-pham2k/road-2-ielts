@@ -9,7 +9,10 @@ Repo nguồn cho nội dung IELTS Speaking. Website luyện tập nằm trong re
 - `speaking/IELTS_Speaking_Practice_Checklist.md` → câu hỏi, đáp án và checklist.
 - `speaking/PRACTICE_LOG.md` → nhật ký luyện tập.
 - `writing/Writing_Practice.md` → Word Order: luyện từng câu từ dễ đến khó.
-- `writing/Topic_Vocabulary.md` → Vocab Review: từ vựng theo 10 chủ đề.
+- `writing/Topic_Vocabulary.md` → Vocab Review: collocation và từ vựng theo 16 chủ đề.
+- `writing/Sentence_Structures.md` → Sentence Structures: mẫu tái sử dụng, ví dụ thực tế cho Work English và IELTS.
+
+Bộ Writing mở rộng hiện gồm 246 câu Word Order, 242 thẻ từ/cụm và 216 mẫu/ví dụ theo 16 chủ đề (6 Work English + 10 IELTS). Xem `writing/README.md` để học và cập nhật đúng.
 
 ## Cập nhật website
 
