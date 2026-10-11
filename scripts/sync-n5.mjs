@@ -51,10 +51,16 @@ const structureGroups = new Map();
 for (const group of data.structures) { if (!structureGroups.has(group.topic)) structureGroups.set(group.topic,group); else structureGroups.get(group.topic).items.push(...group.items); }
 data.structures = [...structureGroups.values()];
 if(data.structures.length!==16 || data.structures.some(section=>section.items.length<12)) throw new Error('Expected 16 structure topics with at least 12 examples each');
+const structurePractice = JSON.parse(await readFile(path.join(source,'writing/Structure_Practice.json'),'utf8'));
+for(const topic of data.structures)for(const item of topic.items){
+ const set=structurePractice.find(set=>set.topic===topic.topic&&set.pattern===item.pattern&&set.example===item.example);
+ if(!set||set.exercises.length!==5)throw new Error(`Missing five-exercise set: ${topic.topic} / ${item.pattern}`);
+ item.exercises=set.exercises;
+}
 for (const filename of ['Instant_Vocab_Practice.md', 'Word_Order_Practice.md', 'IELTS_Speaking_Practice_Checklist.md', 'PRACTICE_LOG.md']) {
   await copyFile(path.join(source,'speaking',filename), path.join(destination,filename));
 }
 await mkdir(path.join(target,'docs/ielts/writing'), {recursive:true});
-for (const filename of ['Writing_Practice.md','Topic_Vocabulary.md','Sentence_Structures.md','DAILY_PLAN.md','README.md']) await copyFile(path.join(source,'writing',filename),path.join(target,'docs/ielts/writing',filename));
+for (const filename of ['Writing_Practice.md','Topic_Vocabulary.md','Sentence_Structures.md','Structure_Practice.json','DAILY_PLAN.md','README.md']) await copyFile(path.join(source,'writing',filename),path.join(target,'docs/ielts/writing',filename));
 await writeFile(path.join(target,'docs/ielts/practice-data.js'), `window.IELTS_PRACTICE = ${JSON.stringify(data,null,2).replace(/</g,'\\u003c')};\n`);
 console.log(`Synced IELTS to ${target}: ${Object.entries(data).filter(([mode])=>mode!=='structures').map(([mode,days])=>`${mode}: ${days.length} groups / ${days.reduce((n,d)=>n+d.count,0)} rows`).join('; ')}; structures: ${data.structures.length} topics`);

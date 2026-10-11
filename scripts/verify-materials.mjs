@@ -26,7 +26,16 @@ for(const group of data['topic-vocab']){
 }
 for(const group of data.structures){
  if(!topics.has(group.topic)||group.items.length!==(group.topic.startsWith('Work English')?16:12))throw Error(`Structure coverage: ${group.topic}`);
- for(const item of group.items){if(!item.purpose||!item.pattern||!item.example||!item.meaning)throw Error('Incomplete structure')}
+ for(const item of group.items){
+  if(!item.purpose||!item.pattern||!item.example||!item.meaning)throw Error('Incomplete structure');
+  if(item.exercises?.length!==5)throw Error('Each structure needs five exercises');
+  const distinct=new Set();let previousLength=0;
+  for(const [index,exercise] of item.exercises.entries()){
+    if(exercise.level!==index+1||!exercise.meaning||!exercise.sentence||exercise.chunks.length<2||exercise.chunks.join(' ')!==exercise.sentence||/[{},|]/.test(exercise.sentence+exercise.meaning))throw Error(`Invalid structure exercise: ${item.pattern}`);
+    const length=exercise.sentence.split(' ').length;if(length<previousLength)throw Error('Exercise difficulty order');previousLength=length;distinct.add(exercise.sentence);
+  }
+  if(distinct.size!==5)throw Error('Structure exercises must be distinct');
+ }
  structures+=group.items.length;
 }
 if(sentences!==246||vocabulary!==242||structures!==216)throw Error('Totals do not match');
@@ -34,7 +43,7 @@ if(data.writing.length!==48||new Set(data.writing.map(g=>g.date)).size!==48)thro
 for(const topic of topics){const groups=data.writing.filter(g=>g.topic===topic);const words=data['topic-vocab'].filter(g=>g.topic===topic);if(groups.length!==3||words.length!==3||groups.reduce((n,g)=>n+g.count,0)!==(topic.startsWith('Work English')?16:15)||words.reduce((n,g)=>n+g.count,0)!==(topic.startsWith('Work English')?12:17))throw Error(`Topic totals changed: ${topic}`);}
 const html=await readFile(path.join(target,'docs/index.html'),'utf8');
 for(const script of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g))new vm.Script(script[1]);
-for(const file of ['Writing_Practice.md','Topic_Vocabulary.md','Sentence_Structures.md','README.md']){
+for(const file of ['Writing_Practice.md','Topic_Vocabulary.md','Sentence_Structures.md','Structure_Practice.json','README.md']){
  const source=await readFile(`writing/${file}`,'utf8');const deployed=await readFile(path.join(target,'docs/ielts/writing',file),'utf8');
  if(source!==deployed)throw Error(`Source copy differs: ${file}`);
 }
