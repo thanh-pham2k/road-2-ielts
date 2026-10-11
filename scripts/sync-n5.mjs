@@ -5,10 +5,10 @@ const source = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const target = path.resolve(process.argv[2] || '../n5-tungkinh');
 const destination = path.join(target, 'docs/ielts/speaking');
 await mkdir(destination, { recursive: true });
-const mapping = { 'instant-vocab': 'Instant_Vocab_Practice.md', 'word-order': 'Word_Order_Practice.md' };
+const mapping = { 'instant-vocab': 'Instant_Vocab_Practice.md', 'word-order': 'Word_Order_Practice.md', writing: 'Writing_Practice.md' };
 const data = {};
 for (const [mode, filename] of Object.entries(mapping)) {
-  const markdown = await readFile(path.join(source, 'speaking', filename), 'utf8');
+  const markdown = await readFile(path.join(source, mode === 'writing' ? 'writing' : 'speaking', filename), 'utf8');
   const sections = [...markdown.matchAll(/^### (\d{4}-\d{2}-\d{2})\s*\n([\s\S]*?)(?=^### |$(?![\s\S]))/gm)];
   data[mode] = sections.map(section => {
     const blocks = [...section[2].matchAll(/```(?:csv)?\s*\n([\s\S]*?)```/g)].map(m => m[1].trim().split(/\r?\n/));
@@ -16,7 +16,7 @@ for (const [mode, filename] of Object.entries(mapping)) {
     const header = blocks[0][0];
     if (blocks.some(b => b[0] !== header)) throw new Error('Inconsistent CSV headers');
     const rows = blocks.flatMap(b => b.slice(1)).filter(Boolean);
-    const columns = mode === 'instant-vocab' ? 5 : 6;
+    const columns = mode === 'writing' ? 4 : mode === 'instant-vocab' ? 5 : 6;
     for (const row of rows) {
       if (row.split(',').length !== columns) throw new Error(`Invalid columns: ${row}`);
       if (mode === 'word-order') {
@@ -28,8 +28,10 @@ for (const [mode, filename] of Object.entries(mapping)) {
   });
   if (!data[mode].length) throw new Error(`No dated content in ${filename}`);
 }
-for (const filename of [...Object.values(mapping), 'IELTS_Speaking_Practice_Checklist.md', 'PRACTICE_LOG.md']) {
+for (const filename of ['Instant_Vocab_Practice.md', 'Word_Order_Practice.md', 'IELTS_Speaking_Practice_Checklist.md', 'PRACTICE_LOG.md']) {
   await copyFile(path.join(source,'speaking',filename), path.join(destination,filename));
 }
+await mkdir(path.join(target,'docs/ielts/writing'), {recursive:true});
+for (const filename of ['Writing_Practice.md','README.md']) await copyFile(path.join(source,'writing',filename),path.join(target,'docs/ielts/writing',filename));
 await writeFile(path.join(target,'docs/ielts/practice-data.js'), `window.IELTS_PRACTICE = ${JSON.stringify(data,null,2).replace(/</g,'\\u003c')};\n`);
 console.log(`Synced IELTS to ${target}: ${Object.entries(data).map(([mode,days])=>`${mode}: ${days.length} days / ${days.reduce((n,d)=>n+d.count,0)} rows`).join('; ')}`);

@@ -1,4 +1,4 @@
-# Road to IELTS — nội dung Speaking
+# Road to IELTS — Speaking và Academic Writing
 
 Repo nguồn cho nội dung IELTS Speaking. Website luyện tập nằm trong repo [n5-tungkinh](https://github.com/thanh-pham2k/n5-tungkinh), tại https://thanh-pham2k.github.io/n5-tungkinh/.
 
@@ -8,6 +8,7 @@ Repo nguồn cho nội dung IELTS Speaking. Website luyện tập nằm trong re
 - `speaking/Word_Order_Practice.md` → Word Order Review.
 - `speaking/IELTS_Speaking_Practice_Checklist.md` → câu hỏi, đáp án và checklist.
 - `speaking/PRACTICE_LOG.md` → nhật ký luyện tập.
+- `writing/Writing_Practice.md` → Writing Review: IELTS Academic Task 1 và Task 2.
 
 ## Cập nhật website
 
