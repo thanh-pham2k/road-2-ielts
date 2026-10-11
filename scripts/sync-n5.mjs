@@ -55,6 +55,6 @@ for (const filename of ['Instant_Vocab_Practice.md', 'Word_Order_Practice.md', '
   await copyFile(path.join(source,'speaking',filename), path.join(destination,filename));
 }
 await mkdir(path.join(target,'docs/ielts/writing'), {recursive:true});
-for (const filename of ['Writing_Practice.md','Topic_Vocabulary.md','Sentence_Structures.md','README.md']) await copyFile(path.join(source,'writing',filename),path.join(target,'docs/ielts/writing',filename));
+for (const filename of ['Writing_Practice.md','Topic_Vocabulary.md','Sentence_Structures.md','DAILY_PLAN.md','README.md']) await copyFile(path.join(source,'writing',filename),path.join(target,'docs/ielts/writing',filename));
 await writeFile(path.join(target,'docs/ielts/practice-data.js'), `window.IELTS_PRACTICE = ${JSON.stringify(data,null,2).replace(/</g,'\\u003c')};\n`);
 console.log(`Synced IELTS to ${target}: ${Object.entries(data).filter(([mode])=>mode!=='structures').map(([mode,days])=>`${mode}: ${days.length} groups / ${days.reduce((n,d)=>n+d.count,0)} rows`).join('; ')}; structures: ${data.structures.length} topics`);

@@ -18,6 +18,8 @@ Sau khi chuyển sang n5-tungkinh, đã gỡ app web riêng, build/server script
 
 ## Quy trình lần sau
 
+Đã chia Writing/Vocab thành 48 ngày học gợi ý (11/10–27/11/2026), mỗi ngày 5–6 câu và 4–6 thẻ cùng chủ đề. `writing/DAILY_PLAN.md` ghi lịch đầy đủ. Giữ cách chia theo ngày khi cập nhật, không gom toàn bộ về một ngày. Tổng tài liệu không đổi. Script verify kiểm tra số buổi và tổng câu/thẻ từng chủ đề.
+
 Yêu cầu mới: chỉ luyện câu phục vụ Work English và IELTS; mở rộng collocation từng chủ đề và thêm Sentence Structures tái sử dụng. Bộ hiện tại: 16 chủ đề, 246 câu, 242 thẻ (12 mỗi nhóm Work; 17 mỗi nhóm IELTS), 216 mẫu/ví dụ. File `writing/Sentence_Structures.md` là nguồn cho mục Sentence Structures trên web. Xem `writing/README.md` để biết schema và cập nhật trực tiếp Markdown; không tạo lại bộ 30 câu/50 thẻ cũ.
 
 1. Cập nhật Markdown trong `road-2-ielts/speaking/`; đồng bộ nội dung hai file luyện tập theo cùng ngày.

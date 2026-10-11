@@ -10,8 +10,7 @@ if(topics.size!==16 || data.structures.length!==16) throw Error('Expected 16 top
 let sentences=0,vocabulary=0,structures=0;
 for(const group of data.writing){
  const rows=group.csv.split('\n').slice(1).map(row=>row.split(','));
- const expected=group.topic.startsWith('Work English')?16:15;
- if(rows.length!==expected || !data['topic-vocab'].find(g=>g.topic===group.topic)) throw Error(`Sentence coverage: ${group.topic}`);
+ if(rows.length<5||rows.length>6 || !data['topic-vocab'].find(g=>g.topic===group.topic&&g.date===group.date)) throw Error(`Daily sentence coverage: ${group.topic}`);
  for(let index=0;index<rows.length;index++){
   const row=rows[index];
   if(row.length!==6 || !row[0]||!row[2]||!row[3]||!row[4]) throw Error('Incomplete sentence');
@@ -22,7 +21,7 @@ for(const group of data.writing){
 }
 for(const group of data['topic-vocab']){
  const rows=group.csv.split('\n').slice(1).map(row=>row.split(','));
- if(rows.length!==(group.topic.startsWith('Work English')?12:17))throw Error(`Vocabulary coverage: ${group.topic}`);
+ if(rows.length<4||rows.length>6)throw Error(`Daily vocabulary coverage: ${group.topic}`);
  for(const row of rows){if(row.length!==5||!row[0]||!row[2]||!row[3]||!row[4])throw Error(`Incomplete bilingual vocabulary: ${row}`)}vocabulary+=rows.length;
 }
 for(const group of data.structures){
@@ -31,6 +30,8 @@ for(const group of data.structures){
  structures+=group.items.length;
 }
 if(sentences!==246||vocabulary!==242||structures!==216)throw Error('Totals do not match');
+if(data.writing.length!==48||new Set(data.writing.map(g=>g.date)).size!==48)throw Error('Expected 48 distinct daily sessions');
+for(const topic of topics){const groups=data.writing.filter(g=>g.topic===topic);const words=data['topic-vocab'].filter(g=>g.topic===topic);if(groups.length!==3||words.length!==3||groups.reduce((n,g)=>n+g.count,0)!==(topic.startsWith('Work English')?16:15)||words.reduce((n,g)=>n+g.count,0)!==(topic.startsWith('Work English')?12:17))throw Error(`Topic totals changed: ${topic}`);}
 const html=await readFile(path.join(target,'docs/index.html'),'utf8');
 for(const script of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g))new vm.Script(script[1]);
 for(const file of ['Writing_Practice.md','Topic_Vocabulary.md','Sentence_Structures.md','README.md']){
