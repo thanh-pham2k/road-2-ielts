@@ -18,6 +18,8 @@ Sau khi chuyển sang n5-tungkinh, đã gỡ app web riêng, build/server script
 
 ## Quy trình lần sau
 
+Speaking mở rộng: `speaking/Question_Topics.json` là nguồn, 26 chủ đề × (4 câu Part 1 + 1 cue card với 4 gợi ý + 3 câu Part 3) = 208 mục mới. Giữ nguyên checklist Speaking 100 câu cũ. Script sync sinh `speaking/Speaking_Questions.md`, copy nguồn vào repo đích và xuất `data.speaking` cho mục Speaking Questions. Chỉnh JSON nguồn rồi sync; không sửa Markdown sinh ra. Ngày theo lịch gợi ý một chủ đề mỗi ngày, không phải ngày đã học hoặc ngày thi. Các câu tự biên soạn, không gọi là đề thật/dự đoán đề.
+
 Mỗi card Sentence Structures hiện có nút chuyển sang Word Order và nạp 5 bài dễ → khó. Nguồn bộ bài: `writing/Structure_Practice.json` (216 bộ, 1080 câu). Khớp card bằng topic + pattern + example; cập nhật JSON khi đổi card. Bộ này không thay lịch 48 ngày. Script sync gắn exercises vào card, verify kiểm tra đủ 5 bài, câu khác nhau, thứ tự và ghép cụm đúng.
 
 Đã chia Writing/Vocab thành 48 ngày học gợi ý (11/10–27/11/2026), mỗi ngày 5–6 câu và 4–6 thẻ cùng chủ đề. `writing/DAILY_PLAN.md` ghi lịch đầy đủ. Giữ cách chia theo ngày khi cập nhật, không gom toàn bộ về một ngày. Tổng tài liệu không đổi. Script verify kiểm tra số buổi và tổng câu/thẻ từng chủ đề.

@@ -7,6 +7,11 @@ const destination = path.join(target, 'docs/ielts/speaking');
 await mkdir(destination, { recursive: true });
 const mapping = { 'instant-vocab': 'Instant_Vocab_Practice.md', 'word-order': 'Word_Order_Practice.md', writing: 'Writing_Practice.md', 'topic-vocab': 'Topic_Vocabulary.md' };
 const data = {};
+const speakingTopics = JSON.parse(await readFile(path.join(source,'speaking/Question_Topics.json'),'utf8'));
+data.speaking = speakingTopics.map((topic,index)=>({topic:topic.topic,date:new Date(Date.UTC(2026,9,11+index)).toISOString().slice(0,10),questions:[...topic.p1.map((text,i)=>({id:`SP-${index+1}-P1-${i+1}`,part:1,text})),{id:`SP-${index+1}-P2-1`,part:2,text:topic.cue,points:topic.points},...topic.p3.map((text,i)=>({id:`SP-${index+1}-P3-${i+1}`,part:3,text}))]}));
+if(data.speaking.length!==26 || data.speaking.some(topic=>topic.questions.length!==8))throw new Error('Incomplete Speaking question bank');
+const speakingMarkdown = '# Speaking — bộ câu hỏi mở rộng\n\n26 chủ đề; mỗi chủ đề có 4 câu Part 1, 1 cue card Part 2 và 3 câu Part 3 (208 mục mới). Lịch gợi ý: một chủ đề mỗi ngày. Giữ nguyên 100 câu trong IELTS_Speaking_Practice_Checklist.md. Đây là câu hỏi luyện tập tự biên soạn, không phải đề thi thật hoặc dự đoán đề.\n\nCách luyện: Part 1 trả lời trực tiếp rồi thêm lý do/ví dụ. Part 2 lập ý trong một phút và nói 1–2 phút. Part 3 nêu quan điểm, giải thích và đưa ví dụ ở mức xã hội.\n\nCấu trúc bài thi tham khảo: https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking\n'+data.speaking.map(topic=>`\n## ${topic.date} · ${topic.topic}\n`+topic.questions.map(q=>`\n### ${q.id} · Part ${q.part}\n\n${q.text}\n${q.points?q.points.map(point=>'- '+point).join('\n')+'\n':''}`).join('')).join('');
+await writeFile(path.join(source,'speaking/Speaking_Questions.md'),speakingMarkdown);
 for (const [mode, filename] of Object.entries(mapping)) {
   const markdown = await readFile(path.join(source, ['writing','topic-vocab'].includes(mode) ? 'writing' : 'speaking', filename), 'utf8');
   const sections = [...markdown.matchAll(/^### (\d{4}-\d{2}-\d{2})([^\r\n]*)\r?\n([\s\S]*?)(?=^### |$(?![\s\S]))/gm)];
@@ -57,10 +62,10 @@ for(const topic of data.structures)for(const item of topic.items){
  if(!set||set.exercises.length!==5)throw new Error(`Missing five-exercise set: ${topic.topic} / ${item.pattern}`);
  item.exercises=set.exercises;
 }
-for (const filename of ['Instant_Vocab_Practice.md', 'Word_Order_Practice.md', 'IELTS_Speaking_Practice_Checklist.md', 'PRACTICE_LOG.md']) {
+for (const filename of ['Instant_Vocab_Practice.md', 'Word_Order_Practice.md', 'IELTS_Speaking_Practice_Checklist.md', 'PRACTICE_LOG.md', 'Question_Topics.json', 'Speaking_Questions.md']) {
   await copyFile(path.join(source,'speaking',filename), path.join(destination,filename));
 }
 await mkdir(path.join(target,'docs/ielts/writing'), {recursive:true});
 for (const filename of ['Writing_Practice.md','Topic_Vocabulary.md','Sentence_Structures.md','Structure_Practice.json','DAILY_PLAN.md','README.md']) await copyFile(path.join(source,'writing',filename),path.join(target,'docs/ielts/writing',filename));
 await writeFile(path.join(target,'docs/ielts/practice-data.js'), `window.IELTS_PRACTICE = ${JSON.stringify(data,null,2).replace(/</g,'\\u003c')};\n`);
-console.log(`Synced IELTS to ${target}: ${Object.entries(data).filter(([mode])=>mode!=='structures').map(([mode,days])=>`${mode}: ${days.length} groups / ${days.reduce((n,d)=>n+d.count,0)} rows`).join('; ')}; structures: ${data.structures.length} topics`);
+console.log(`Synced IELTS to ${target}: ${Object.entries(data).filter(([mode])=>!['structures','speaking'].includes(mode)).map(([mode,days])=>`${mode}: ${days.length} groups / ${days.reduce((n,d)=>n+d.count,0)} rows`).join('; ')}; structures: ${data.structures.length} topics; speaking: 26 topics / 208 questions`);

@@ -5,6 +5,10 @@ const target=path.resolve(process.argv[2]||'../n5-tungkinh');
 const context={window:{}};
 vm.runInNewContext(await readFile(path.join(target,'docs/ielts/practice-data.js'),'utf8'),context);
 const data=context.window.IELTS_PRACTICE;
+const questionIds=new Set();
+if(data.speaking?.length!==26)throw Error('Expected 26 Speaking topics');
+for(const topic of data.speaking){if(topic.questions.length!==8||topic.questions.filter(q=>q.part===1).length!==4||topic.questions.filter(q=>q.part===2).length!==1||topic.questions.filter(q=>q.part===3).length!==3)throw Error('Speaking coverage');for(const question of topic.questions){if(!question.text||questionIds.has(question.id)||(question.part===2&&question.points?.length!==4))throw Error('Invalid Speaking question');questionIds.add(question.id);}}
+if(questionIds.size!==208)throw Error('Expected 208 additional Speaking questions');
 const topics=new Set(data.writing.map(group=>group.topic));
 if(topics.size!==16 || data.structures.length!==16) throw Error('Expected 16 topics');
 let sentences=0,vocabulary=0,structures=0;
