@@ -8,7 +8,8 @@ Theo yêu cầu ngày 2026-10-11, đưa bài IELTS vào website hiện có của
 - `speaking/Word_Order_Practice.md` → **Word Order Review** (`word-order`).
 - `speaking/IELTS_Speaking_Practice_Checklist.md`: câu hỏi và câu trả lời Speaking.
 - `speaking/PRACTICE_LOG.md`: nhật ký học.
-- `writing/Writing_Practice.md` → **Writing Review** (`writing`): Academic Task 1 và Task 2. CSV 4 cột `context,prompt,input,sample_answer`; bài luyện từng phần có mẫu tham khảo, không chấm band tự động. Yêu cầu đã xác nhận ngày 2026-10-11.
+- `writing/Writing_Practice.md` → **Word Order Review** (`writing`), CSV 6 cột như Speaking Word Order; 30 câu theo 10 chủ đề và 3 mức. Thay thế Writing Review 4 cột; chỉ luyện câu, chưa làm bài dài.
+- `writing/Topic_Vocabulary.md` → **Vocab Review** (`topic-vocab`), CSV 5 cột; 50 thẻ theo cùng 10 chủ đề. Xem `writing/README.md` cho quy trình học và cập nhật.
 
 Repo `road-2-ielts` là nguồn nội dung. Giữ heading ngày `### YYYY-MM-DD` và CSV trong code fence. Instant Vocab có 5 cột; Word Order có thêm cột `word_order`, ngăn các cụm bằng `|`. Các tên cột `hiragana`, `example_ja` được giữ để tương thích app, nhưng chứa tiếng Anh; `hiragana` có thể trống. Không thêm dấu phẩy vào nội dung ô CSV khi dùng script hiện tại.
 
@@ -18,7 +19,7 @@ Sau khi chuyển sang n5-tungkinh, đã gỡ app web riêng, build/server script
 
 1. Cập nhật Markdown trong `road-2-ielts/speaking/`; đồng bộ nội dung hai file luyện tập theo cùng ngày.
 2. Pull repo đích trước khi đồng bộ để giữ các thay đổi mới.
-3. Chạy `node scripts/sync-n5.mjs E:/n5-tungkinh` từ repo này. Script kiểm tra số cột và thứ tự cụm, copy 4 Markdown vào `docs/ielts/speaking/`, copy nội dung Writing vào `docs/ielts/writing/` và sinh `docs/ielts/practice-data.js` cho cả 3 chế độ.
+3. Chạy `node scripts/sync-n5.mjs E:/n5-tungkinh` từ repo này. Script kiểm tra số cột và thứ tự cụm, copy Markdown vào `docs/ielts/speaking/` và `docs/ielts/writing/`, sinh `docs/ielts/practice-data.js` cho 4 bộ nội dung.
 4. Kiểm tra dialog **Chọn câu IELTS…** trong Instant Vocab và Word Order Review: lọc ngày, tick từng câu rồi **Nạp các câu đã chọn**. Không chọn mặc định; giữ lựa chọn qua các bộ lọc trong lần mở dialog. Ngôn ngữ tự chuyển sang English khi nạp IELTS.
 5. Add, commit, push thay đổi ở **cả hai repo**. Chỉ sửa nguồn Markdown, không sửa tay `practice-data.js`.
 
