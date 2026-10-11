@@ -11,6 +11,8 @@ Theo yêu cầu ngày 2026-10-11, đưa bài IELTS vào website hiện có của
 
 Repo `road-2-ielts` là nguồn nội dung. Giữ heading ngày `### YYYY-MM-DD` và CSV trong code fence. Instant Vocab có 5 cột; Word Order có thêm cột `word_order`, ngăn các cụm bằng `|`. Các tên cột `hiragana`, `example_ja` được giữ để tương thích app, nhưng chứa tiếng Anh; `hiragana` có thể trống. Không thêm dấu phẩy vào nội dung ô CSV khi dùng script hiện tại.
 
+Sau khi chuyển sang n5-tungkinh, đã gỡ app web riêng, build/server scripts, package.json, manifest Sites và workflow Pages khỏi repo nguồn. Lần sau chỉ cập nhật nội dung + đồng bộ; không tạo lại web/deploy riêng ở đây. Bản ChatGPT Sites đã publish trước đó không còn là đích cập nhật.
+
 ## Quy trình lần sau
 
 1. Cập nhật Markdown trong `road-2-ielts/speaking/`; đồng bộ nội dung hai file luyện tập theo cùng ngày.

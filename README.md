@@ -1,33 +1,22 @@
-# Road to IELTS — Speaking
+# Road to IELTS — nội dung Speaking
 
-Website tĩnh render nội dung từ `speaking/IELTS_Speaking_Practice_Checklist.md` và `speaking/PRACTICE_LOG.md`.
+Repo nguồn cho nội dung IELTS Speaking. Website luyện tập nằm trong repo [n5-tungkinh](https://github.com/thanh-pham2k/n5-tungkinh), tại https://thanh-pham2k.github.io/n5-tungkinh/.
 
-## Chạy local
+## Nội dung
 
-Yêu cầu Node.js, không cần cài dependencies.
+- `speaking/Instant_Vocab_Practice.md` → Instant Vocab.
+- `speaking/Word_Order_Practice.md` → Word Order Review.
+- `speaking/IELTS_Speaking_Practice_Checklist.md` → câu hỏi, đáp án và checklist.
+- `speaking/PRACTICE_LOG.md` → nhật ký luyện tập.
+
+## Cập nhật website
+
+Sửa Markdown tại đây, pull repo n5-tungkinh, rồi chạy bằng Node.js (không cần cài dependencies):
 
 ```sh
-npm run dev
+node scripts/sync-n5.mjs E:/n5-tungkinh
 ```
 
-Mở http://127.0.0.1:4173. Sau khi sửa Markdown, khởi động lại server để cập nhật dữ liệu.
+Script kiểm tra dữ liệu, copy Markdown và sinh bộ bài theo ngày cho Instant Vocab / Word Order. Sau đó kiểm tra và commit/push cả hai repo. GitHub Pages của n5-tungkinh publish từ `main` → `/docs`.
 
-## Build
-
-```sh
-npm run build
-```
-
-Upload thư mục `dist/` lên static hosting, hoặc mở trực tiếp `dist/index.html`. Đường dẫn assets tương đối nên dùng được cả dưới subpath.
-
-Bao gồm 10 chủ đề, 100 câu hỏi, tìm kiếm, ẩn/hiện câu trả lời, routine, checklist và nhật ký. Những câu trả lời đang trống được giữ nguyên. Checklist được lưu trong localStorage của trình duyệt, không ghi ngược vào Markdown và không tự bổ sung nhật ký.
-
-## Tự động deploy với GitHub Pages
-
-Workflow `.github/workflows/pages.yml` tự build và deploy thư mục `dist/` mỗi lần push lên `main`. Có thể chạy thủ công trong tab Actions bằng Run workflow.
-
-Trong Settings → Pages của repo, chọn Source: **GitHub Actions** một lần trước khi deploy. Repo private cần gói GitHub hỗ trợ Pages; không cần đổi repo thành public nếu gói tài khoản đã hỗ trợ.
-
-URL mặc định sau khi deploy thành công: https://thanh-pham2k.github.io/road-2-ielts/
-
-Sửa nội dung Markdown rồi commit và push; workflow tự cập nhật web. Workflow này cập nhật GitHub Pages, không cập nhật bản hosting ChatGPT Sites.
+Xem [UPDATE_NOTES.md](UPDATE_NOTES.md) để biết quy trình cập nhật chi tiết. Repo này không còn chứa app web hay workflow deploy riêng.
